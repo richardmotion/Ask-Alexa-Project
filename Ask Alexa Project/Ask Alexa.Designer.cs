@@ -111,4 +111,3 @@
         private System.Windows.Forms.Label version;
     }
 }
-

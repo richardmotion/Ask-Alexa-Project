@@ -23,9 +23,12 @@ namespace Ask_Alexa_Project
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
+            //Points to the synched file from the web server.
             var lines = File.ReadAllLines("C:\\AlexaQuestions.txt");
+            //Sets the text box on the UI to show the current question (starting from the first line in text file).
             if (index < lines.Length)
                 textBox1.Text = lines[index++];
+            //Speaks the question displayed in the UI text box.
             synth.SpeakAsync(textBox1.Text);
         }
     }
